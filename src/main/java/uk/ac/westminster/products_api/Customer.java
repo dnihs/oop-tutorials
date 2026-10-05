@@ -5,8 +5,11 @@ public class Customer {
     private String name;
     private String email;
     private Address address;
+    private static int customerCount = 0;
+    private String[] tags;
 
     public Customer(){
+        customerCount++;
 
     }
 
@@ -15,6 +18,7 @@ public class Customer {
         this.name = name;
         this.email = email;
         this.address = address;
+        customerCount++;
     }
     public Long getId(){
         return id;
@@ -27,5 +31,15 @@ public class Customer {
     }
     public Address getAddress(){
         return address;
+    }
+    public static int getCustomerCount(){
+        return customerCount;
+    }
+
+    public String[] getTags(){
+        return tags;
+    }
+    public void setTags(String[] tags){
+        this.tags = tags;
     }
 }
