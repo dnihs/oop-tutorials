@@ -5,24 +5,28 @@ public class Product {
     private String name;
     private double price;
 
-    public Product(){
+    public Product() {
 
     }
 
-    public Product (Long id, String name,double price){
+    public Product(Long id, String name, double price) {
         this.id = id;
         this.name = name;
         this.price = price;
     }
 
-    public Long getId(){
+    public Long getId() {
         return this.id;
     }
-    public String getName(){
+
+    //    When this method is commented out, Jackson cannot see the field,
+    //    and it silently skips over it. This can be identified with API testing using Postman or Swagger UI.
+
+    public String getName() {
         return this.name;
     }
 
-    public double getPrice(){
+    public double getPrice() {
         return this.price;
     }
 }
