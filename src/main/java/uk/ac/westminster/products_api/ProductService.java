@@ -28,5 +28,9 @@ public class ProductService {
 
     }
 
+    public void deleteProduct(Long id){
+        products.removeIf(p -> p.getId().equals(id));
+    }
+
 
 }
