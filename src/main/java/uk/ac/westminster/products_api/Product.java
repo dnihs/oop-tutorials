@@ -19,7 +19,18 @@ public class Product {
         return this.id;
     }
 
-    //    When this method is commented out, Jackson cannot see the field,
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+//    When this method is commented out, Jackson cannot see the field,
     //    and it silently skips over it. This can be identified with API testing using Postman or Swagger UI.
 
     public String getName() {
