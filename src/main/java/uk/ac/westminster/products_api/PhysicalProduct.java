@@ -26,5 +26,13 @@ public class PhysicalProduct extends Product {
     }
 
 
+//    @Override help detect errors at compile, prevent accidental method naming errors and improve readability
+//    for developers
+    @Override
+    public String getSummary(){
+        return "Name: "+getName()+ " | Price: "+getPrice()+ " | Weight(kg): "+weightKg+ " | Dimensions: "+dimensions;
+    }
+
+
 
 }
