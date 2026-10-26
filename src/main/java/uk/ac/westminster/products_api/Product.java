@@ -1,6 +1,6 @@
 package uk.ac.westminster.products_api;
 
-public class Product {
+public abstract class Product {
     private Long id;
     private String name;
     private double price;
@@ -31,11 +31,6 @@ public class Product {
         this.price = price;
     }
 
-    public String getSummary(){
-        return "Name: "+name+ " | Price: "+price;
-    }
-
-
 //    When this method is commented out, Jackson cannot see the field,
     //    and it silently skips over it. This can be identified with API testing using Postman or Swagger UI.
 
@@ -46,4 +41,6 @@ public class Product {
     public double getPrice() {
         return this.price;
     }
+
+    public abstract String getSummary();
 }
