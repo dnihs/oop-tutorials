@@ -41,9 +41,13 @@ public class ProductController {
         return productService.findByName(name);
     }
 
-@GetMapping("/products/cheaper-than")
-public List<Product> findCheaperThan (@RequestParam double price) {
+    @GetMapping("/products/cheaper-than")
+    public List<Product> findCheaperThan (@RequestParam double price) {
     return productService.findCheaperThan(price);
 }
 
+    @GetMapping("/products/summaries")
+    public List<String> getSummaries(){
+        return productService.getAllSummaries();
+    }
 }
