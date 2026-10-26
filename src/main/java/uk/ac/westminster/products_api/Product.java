@@ -30,6 +30,12 @@ public class Product {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    public String getSummary(){
+        return "Name: "+name+ " | Price: "+price;
+    }
+
+
 //    When this method is commented out, Jackson cannot see the field,
     //    and it silently skips over it. This can be identified with API testing using Postman or Swagger UI.
 
